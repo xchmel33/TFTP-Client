@@ -1,7 +1,9 @@
+/* Network applications and network management */
+
 #include <iostream>
 #include <string>
-#include <unistd.h>
 #include <bits/stdc++.h>
+#include <sys/types.h>
 using namespace std;
 
 #define MAX_OPTIONS 10
@@ -24,7 +26,7 @@ map<string,string> get_options(string params){
         if (isspace(params[i])){
             optCount++;
             if (optCount >= MAX_OPTIONS){
-                cout << "Error - too many options\n";
+                cerr << "Error - too many options\n";
                 return {};
             } else continue;
         }else{
@@ -80,7 +82,8 @@ map<string,string> get_options(string params){
    else{
        error = error.substr(0,error.length()-1);
        string errors = (error.find('\n') != -1) ? "Errors:\n":"Error - ";
-       cout << errors << error << "\n";
+       cerr << errors << error << "\n";
+       cout << '\n'; // ?
        return {};
    }
 }
@@ -91,6 +94,10 @@ void printOptions(map<string,string> options){
     for(j = options.begin(); j != options.end(); j++){
         cout << j->first << " : " << j->second << "\n";
     }
+}
+
+void TFTP_client(map<string, string> options){
+
 }
 
 int main() {
@@ -110,7 +117,8 @@ int main() {
                 continue;
             }
             else{
-                printOptions(options);
+                //printOptions(options);
+                TFTP_client(options);
             }
         }
     }
