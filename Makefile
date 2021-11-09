@@ -1,0 +1,2 @@
+mytftpclient:
+	echo "hello world"
