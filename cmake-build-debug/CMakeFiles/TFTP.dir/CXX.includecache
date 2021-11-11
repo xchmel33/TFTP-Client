@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/desktop/VirtualBox VMs/PDS-VM shared/TFTP/main.cpp
+iostream
+-
+string
+-
+map
+-
+sys/types.h
+-
+

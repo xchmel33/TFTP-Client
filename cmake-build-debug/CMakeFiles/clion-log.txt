@@ -1,16 +1,4 @@
-C:\Users\chmel\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.5605.4\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/chmel/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/213.5605.4/bin/ninja/win/ninja.exe -G Ninja C:\Users\chmel\CLionProjects\TFTP
--- The C compiler identification is GNU 8.1.0
--- The CXX compiler identification is GNU 8.1.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/MinGW/mingw64/bin/gcc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files/JetBrains/MinGW/mingw64/bin/c++.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+C:\Users\desktop\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - NMake Makefiles" "C:\Users\desktop\VirtualBox VMs\PDS-VM shared\TFTP"
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/chmel/CLionProjects/TFTP/cmake-build-debug
+-- Build files have been written to: C:/Users/desktop/VirtualBox VMs/PDS-VM shared/TFTP/cmake-build-debug

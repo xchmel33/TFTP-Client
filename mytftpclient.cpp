@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <string>
-#include <bits/stdc++.h>
-#include <sys/types.h>
+#include <map>
+#include <ActiveSocket.h>
 using namespace std;
 
 #define MAX_OPTIONS 10
@@ -22,7 +22,8 @@ map<string,string> get_options(string params){
 
 
    // split string into array
-   for(int i=0;i<params.length();i++){
+   int n = params.length();
+   for(int i=0;i<n;i++){
         if (isspace(params[i])){
             optCount++;
             if (optCount >= MAX_OPTIONS){
@@ -81,9 +82,7 @@ map<string,string> get_options(string params){
    }
    else{
        error = error.substr(0,error.length()-1);
-       string errors = (error.find('\n') != -1) ? "Errors:\n":"Error - ";
-       cerr << errors << error << "\n";
-       cout << '\n'; // ?
+       cerr << "Errors:\n" << error << "\n";
        return {};
    }
 }
@@ -97,6 +96,8 @@ void printOptions(map<string,string> options){
 }
 
 void TFTP_client(map<string, string> options){
+    printOptions(options);
+
 
 }
 
@@ -117,7 +118,6 @@ int main() {
                 continue;
             }
             else{
-                //printOptions(options);
                 TFTP_client(options);
             }
         }

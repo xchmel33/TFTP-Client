@@ -6,10 +6,9 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20.2"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "TFTP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TFTP-Debug-dfb56ea7b5b27e365261.json",
+					"jsonFile" : "target-TFTP-Debug-fced2ef048e52021074f.json",
 					"name" : "TFTP",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/chmel/CLionProjects/TFTP/cmake-build-debug",
-		"source" : "C:/Users/chmel/CLionProjects/TFTP"
+		"build" : "C:/Users/desktop/VirtualBox VMs/PDS-VM shared/TFTP/cmake-build-debug",
+		"source" : "C:/Users/desktop/VirtualBox VMs/PDS-VM shared/TFTP"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }
