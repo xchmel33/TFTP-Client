@@ -1,0 +1,46 @@
+TASKS:
+Your task is to:
+1) Study the TFTP protocol and write the relevant documentation.
+2) Implement the client part of this protocol, which would generate requests to the server for both IPv4 and IPv6.
+3) Test and demonstrate the use of your project in a real situation.
+
+SPECIFICATIONS OF TASKS:
+Ad 1)
+Start reading standards and drafts for mastery. Ideally, start by reading IEN 133, which describes version 1, then move on to version 2 (in its updated RFC 1350 form), which you will implement, and don't forget all the other related RFCs 1785, 2090, 2347, 2348, 2349.
+
+The documentation can be created in any word processor and in the languages ​​Czech, English, and Slovak. When creating documentation, cite in accordance with https://www.fit.vut.cz/study/theses/citations/.cs. http://www.fit.vutbr.cz/~martinek/latex/citace.html is also worth reading.
+
+Ad 2)
+Implement a TFTPv2 client with extensions timeout interval, blocksize option and transfer size option (ideally also with multicast option).
+The client will be aware of its activity in a suitable form (preferably a statement containing a time stamp, the client's IP address
+and an analysis of the message that was received/processed/sent), while the form of the output is free.
+After starting, the client will offer its own command line, which will process transfer requests according to the parameters listed below.
+Mail-mode support is not required.
+
+Mandatory input and output:
+
+$myftpclient
+>-R/W -d directory/file -t timeout -s size -a address,port -c mode -m
+
+    -R parameter or -W parameter (required)
+    If the -R parameter is specified, the file will be read from the server. If the -W parameter is specified, the file will be written to the server. The presence of both parameters within one command is excluded.
+
+    -d parameter (required)
+    file specifies the file that the client will receive/send from/to the server. directory specifies the absolute path to/from where the file is to be transferred.
+
+    -t parameter (optional)
+    timeout in seconds specifies the timeout value that the client will request from the server. The client proposes, the server may or may not accept. The timeout itself expresses the time the server waits before retransmission of unconfirmed data. If the parameter is not present, the option is not used.
+
+    -s parameter (optional)
+    size specifies the maximum block size in multiples of octets that the client will propose for transmission. As the upper limit that the client sends, consider the smallest of the MTUs of all the interfaces on which the client could send a TFTP message to the server (be careful, so potentially more than 512 B, which is in the RFC).
+
+    -m parameter (optional)
+    the client requests data transfer using multicast from the server through the multicast option.
+
+    -c parameter (optional)
+    mode, which can only take the values ​​"ascii" (or "netascii") and "binary" (or "octet"), by which the client specifies the data transfer mode. Implicitly (without the presence of an argument) a binary transfer is considered.
+
+    -a parameter (optional)
+    address is the address of the server in the IPv4 or IPv6 format of the interface on which the service is to run (if none is specified, IPv4 localhost is implicitly considered, i.e. 127.0.0.1).
+    port is the port number the server is listening on (defaults to 69 if not specified). If you do not specify the -a parameter, consider IPv4 127.0.0.1 and port 69. If you specify the -a parameter, stick to the requested syntax address,port.
+

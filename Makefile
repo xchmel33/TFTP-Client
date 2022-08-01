@@ -3,7 +3,7 @@ CFLAGS= -g -Wall
 
 TARGET = mytftpclient
 
-all: $(TARGET)
+all: clean $(TARGET)
 
 $(TARGET): $(TARGET).cpp
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
